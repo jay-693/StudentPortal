@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Signin {
+    <div class="login-container">
+        <h2>Welcome to College Name Student Portal</h2>
+        <form class="login-form">
+            <div class="login-as">
+                <p>Login as*:
+                <input type="radio" id="admin" name="login-as" value="Admin">
+                <label for="admin">Admin</label>
+                <input type="radio" id="student" name="login-as" value="Student">
+                    <label for="student" checked>Student</label>
+                </p><br>@*
+            <label><input type="radio" name="login-as" value="admin"> Admin</label>
+                <label><input type="radio" name="login-as" value="student" checked> Student</label> *@
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Username*" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password*" required>
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+}
