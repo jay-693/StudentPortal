@@ -18,15 +18,20 @@ namespace StudentPortal.Controllers
             return View();
         }
 
-        public IActionResult SignUp()
+        public IActionResult AcademicCalender()
         {
+            return View();
+        }
+        public IActionResult Index(string username)
+        {
+            // Check if username is provided
+            if (!string.IsNullOrEmpty(username))
+            {
+                ViewBag.Username = username;
+            }
             return View();
         }
 
-        public IActionResult SignIn()
-        {
-            return View();
-        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

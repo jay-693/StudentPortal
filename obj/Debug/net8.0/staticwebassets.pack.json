@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
+      "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\images\\profile.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\images\\twitter.png",
       "PackagePath": "staticwebassets\\images\\twitter.png"
     },

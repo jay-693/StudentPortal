@@ -26,7 +26,7 @@
                 <li class="dropdown">
                     <a class="sep" href="#">Academics</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Academic Calendar</a></li>
+                        <li style="margin-left:0px"><a asp-controller="Home" asp-action="AcademicCalender">Academic Calendar</a></li>
                         <li><a href="#">Class Time Table</a></li>
                         <li><a href="#">List Of Holidays</a></li>
                         <li><a href="#">Semwise Attendance</a></li>
@@ -63,13 +63,14 @@
             </ul>
         </nav>
         <div class="auth-buttons">
-            <a style="text-decoration:none" asp-controller="Home" asp-action="SignIn"><button class="sign-in">Sign In</button></a>
-            <a style="text-decoration:none" asp-controller="Home" asp-action="SignUp"><button class="sign-up">Sign Up</button></a>
+            <a style="text-decoration:none" asp-controller="SignUp" asp-action="SignIn"><button class="sign-in">Sign In</button></a>
+            <a style="text-decoration:none" asp-controller="SignUp" asp-action="SignUp"><button class="sign-up">Sign Up</button></a>
         </div>
     </header>
 
     <!-- Main Content -->
     <main>
+        @RenderSection("academic", false)
         @RenderSection("Imagelogo", false)
         @RenderSection("Signin", false)
         @RenderSection("Signup", false)
@@ -123,5 +124,6 @@
             </div>
         </div>
     </footer>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
