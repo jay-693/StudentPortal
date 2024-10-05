@@ -22,6 +22,11 @@ namespace StudentPortal.Controllers
         {
             return View();
         }
+
+        public IActionResult ClassTimeTable()
+        {
+             return View();
+        }
         public IActionResult Index(string username)
         {
             // Check if username is provided

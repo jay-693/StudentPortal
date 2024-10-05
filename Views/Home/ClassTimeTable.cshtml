@@ -1,10 +1,10 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@section academic {
+@section Timetable {
     <div class="content-wrapper">
-        <h1>Academic Calendar</h1>
-        <p class="breadcrumb">You are here: Academics >> Academic Calendar</p>
+        <h1>Class TimeTable</h1>
+        <p class="breadcrumb">You are here: Academics >> Class TimeTable</p>
     </div>
     <br>
     <div class="super-container">
@@ -23,14 +23,14 @@
                     <option value="8">IV/IV II SEM</option>
                 </select>
             </div>
-            <button class="download-btn" onclick="downloadPDF()">Download</button>
+            <button class="download-btn" onclick="downloadholyPDF()">Download</button>
         </div>
     </div>
-    
+
     <script>
-        function downloadPDF() {
+        function downloadholyPDF() {
             var selectedSem = document.getElementById("sem").value;
-            window.location.href = `/AcademicCalendar/DownloadPdf?sem=${selectedSem}`;
+            window.location.href = `/AcademicCalendar/DownloadHolyPdf?sem=${selectedSem}`;
         }
     </script>
 }

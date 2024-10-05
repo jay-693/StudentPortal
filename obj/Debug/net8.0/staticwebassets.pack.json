@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\StudentPortal.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\AcademicCalenderStyle.css",
+      "PackagePath": "staticwebassets\\css\\AcademicCalenderStyle.css"
+    },
+    {
       "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\Landingstyle.css",
       "PackagePath": "staticwebassets\\css\\Landingstyle.css"
     },
@@ -283,6 +287,14 @@
     {
       "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\pdfs\\Sem1.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Sem1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\pdfs\\Semester1.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Semester1.pdf"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.StudentPortal.Microsoft.AspNetCore.StaticWebAssets.props",

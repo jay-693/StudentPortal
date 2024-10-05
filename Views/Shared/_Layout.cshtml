@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/css/Landingstyle.css">
     <link rel="stylesheet" href="~/css/LoginStyle.css">
     <link rel="stylesheet" href="~/css/SignUpStyle.css">
+    <link rel="stylesheet" href="~/css/AcademicCalenderStyle.css">
 </head>
 <body>
     <!-- Header -->
@@ -26,8 +27,8 @@
                 <li class="dropdown">
                     <a class="sep" href="#">Academics</a>
                     <ul class="dropdown-content">
-                        <li style="margin-left:0px"><a asp-controller="Home" asp-action="AcademicCalender">Academic Calendar</a></li>
-                        <li><a href="#">Class Time Table</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Class TimeTable</a></li>
                         <li><a href="#">List Of Holidays</a></li>
                         <li><a href="#">Semwise Attendance</a></li>
                         <li><a href="#">Tuition Fee</a></li>
@@ -69,8 +70,9 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main>@* 
         @RenderSection("academic", false)
+        @RenderSection("Timetable", false) *@
         @RenderSection("Imagelogo", false)
         @RenderSection("Signin", false)
         @RenderSection("Signup", false)

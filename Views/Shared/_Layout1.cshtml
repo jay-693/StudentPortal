@@ -26,8 +26,8 @@
                 <li class="dropdown">
                     <a class="sep" href="#">Academics</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Academic Calendar</a></li>
-                        <li><a href="#">Class Time Table</a></li>
+                        <li><a asp-controller="Home" asp-action="AcademicCalender">Academic Calendar</a></li>
+                        <li><a asp-controller="Home" asp-action="ClassTimeTable">Class Time Table</a></li>
                         <li><a href="#">List Of Holidays</a></li>
                         <li><a href="#">Semwise Attendance</a></li>
                         <li><a href="#">Tuition Fee</a></li>
@@ -71,7 +71,7 @@
 
     <!-- Main Content -->
     <main>
-        <section class="welcome-section">
+        @* <section class="welcome-section">
             <div class="welcome-content">
                 <div class="text-logo">
                     <h1>&nbsp Welcome to <br> College Name <br> Student Portal</h1>
@@ -83,7 +83,10 @@
                     <img src="~/images/Plan.png" alt="Students Illustration">
                 </div>
             </div>
-        </section>
+        </section> *@
+        @RenderSection("Imagelogo", false)
+        @RenderSection("academic",false)
+        @RenderSection("Timetable", false)
     </main>
 
     <!-- Footer -->

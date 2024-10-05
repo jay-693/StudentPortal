@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9d2DfUv6jeVdKShfrU3xEYDyQU0KgyyyuvmdmWuxMjo=",
+  "Hash": "K+LqfT42EUzXDxfHic5x/OwQJuKUgEdbaQhk6ve1rJ0=",
   "Source": "StudentPortal",
   "BasePath": "_content/StudentPortal",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\StudentPortal.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\AcademicCalenderStyle.css",
+      "SourceId": "StudentPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\",
+      "BasePath": "_content/StudentPortal",
+      "RelativePath": "css/AcademicCalenderStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AcademicCalenderStyle.css"
     },
     {
       "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\Landingstyle.css",
@@ -1383,6 +1402,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\pdfs\\Sem1.pdf",
+      "SourceId": "StudentPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\",
+      "BasePath": "_content/StudentPortal",
+      "RelativePath": "pdfs/Sem1.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdfs\\Sem1.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\pdfs\\Semester1.pdf",
+      "SourceId": "StudentPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\",
+      "BasePath": "_content/StudentPortal",
+      "RelativePath": "pdfs/Semester1.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdfs\\Semester1.pdf"
     }
   ]
 }
