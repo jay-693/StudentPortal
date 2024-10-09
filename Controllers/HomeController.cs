@@ -23,9 +23,18 @@ namespace StudentPortal.Controllers
             return View();
         }
 
+        public IActionResult LandingPage()
+        {
+            return View();
+        }
+
         public IActionResult ClassTimeTable()
         {
              return View();
+        }
+        public IActionResult ListOfHolidays()
+        {
+            return View();
         }
         public IActionResult Index(string username)
         {

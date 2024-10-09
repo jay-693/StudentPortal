@@ -1,0 +1,60 @@
+﻿@* @model IEnumerable<dynamic>  *@<!-- Assuming you're using the dynamic type from the controller -->
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+@section holiday {
+    <div class="exam-page">
+        <div class="exam-wrapper">
+            <h1>Exam TimeTable</h1>
+            <p class="exambread">You are here: ExaminationCell >> Exam TimeTable</p>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Select the Semester</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="sem-list1">
+                                <label for="sem">Sem :</label>
+                                <select id="sem">
+                                    <option value="1">I SEM</option>
+                                    <option value="2">II SEM</option>
+                                    <option value="3">III SEM</option>
+                                    <option value="4">IV SEM</option>
+                                    <option value="5">V SEM</option>
+                                    <option value="6">VI SEM</option>
+                                    <option value="7">VII SEM</option>
+                                    <option value="8">VIII SEM</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <button class="examdownload-btn" onclick="downloadexamPDF()">Download</button>
+        </div>
+        <div class="exam-time-table">Jai shree ram</div>
+    </div>      
+
+    <script>
+        $(document).ready(function () {
+            $('#sem').change(function () {
+                var selectedSem = $(this).val();
+
+                $.ajax({
+                    url: '/ExaminationCell/GetExamTimeTable',
+                    type: 'POST',
+                    data: { semester: selectedSem },
+                    success: function (data) {
+                        $('.exam-time-table').html(data);
+                    },
+                    error: function () {
+                        alert('Error fetching data.');
+                    }
+                });
+            });
+        });
+    </script>
+}

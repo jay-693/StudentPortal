@@ -1,13 +1,13 @@
-﻿.content-wrapper {
+﻿.content-wrapper1 {
     display: flex;
     flex-direction: column;
-    margin-left:-100px;
+    margin-left:-90px;
     margin-top:0;
     width:35vw;
     height:90vh;
 }
 
-.breadcrumb {
+.breadcrumb1 {
     flex-shrink:0;
     color: #E437D2;
     font-size: 14px;
@@ -38,6 +38,7 @@ h1 {
     align-items:center;
 }
 .super-container{
+    display:flex;
     width:50vw;
 }
 
@@ -51,7 +52,7 @@ select {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 0;
 }
 
     table th, table td {
@@ -80,4 +81,39 @@ table {
 }
 .option{
     border-radius:10px;
+}
+
+.holiday-wrapper {
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    margin-left: -30px;
+    margin-top: -10px;
+    padding-top:20px;
+    width: 120vw;
+    height: 55vh auto;
+}
+
+.bread{
+    flex-shrink: 0;
+    color: #E437D2;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 0px 0px;
+}
+
+h1 {
+    text-align: left;
+    margin: 0px;
+}
+.btn btn-primary .download-btn {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
 }

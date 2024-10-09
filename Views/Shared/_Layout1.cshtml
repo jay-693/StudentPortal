@@ -1,4 +1,8 @@
 ﻿@{
+    var username = ViewContext.HttpContext.Session.GetString("UserName");
+}
+
+@{
     ViewData["Title"] = "College Name Student Portal";
 }
 
@@ -11,6 +15,9 @@
     <link rel="stylesheet" href="~/css/Landingstyle.css">
     <link rel="stylesheet" href="~/css/LoginStyle.css">
     <link rel="stylesheet" href="~/css/SignUpStyle.css">
+    <link rel="stylesheet" href="~/css/AcademicCalenderStyle.css">
+    <link rel="stylesheet" href="~/css/ClassTimeTableStyle.css">
+    <link rel="stylesheet" href="~/css/ExaminationCellStyle.css">
 </head>
 <body>
     <!-- Header -->
@@ -28,7 +35,7 @@
                     <ul class="dropdown-content">
                         <li><a asp-controller="Home" asp-action="AcademicCalender">Academic Calendar</a></li>
                         <li><a asp-controller="Home" asp-action="ClassTimeTable">Class Time Table</a></li>
-                        <li><a href="#">List Of Holidays</a></li>
+                        <li><a asp-controller="Holidays" asp-action="Holidaylist">List Of Holidays</a></li>
                         <li><a href="#">Semwise Attendance</a></li>
                         <li><a href="#">Tuition Fee</a></li>
                         <li><a href="#">Hostel & Transportation Fee</a></li>
@@ -37,7 +44,7 @@
                 <li class="dropdown">
                     <a class="sep" href="#">Examination Cell</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Exam Time Table</a></li>
+                        <li><a <a asp-controller="ExaminationCell" asp-action="ExamTimeTable">Exam Time Table</a></li>
                         <li><a href="#">Internal Marks</a></li>
                         <li><a href="#">Semwise Grades</a></li>
                         <li><a href="#">Due Subjects</a></li>
@@ -71,7 +78,7 @@
 
     <!-- Main Content -->
     <main>
-        @* <section class="welcome-section">
+        <section class="welcome-section">
             <div class="welcome-content">
                 <div class="text-logo">
                     <h1>&nbsp Welcome to <br> College Name <br> Student Portal</h1>
@@ -83,10 +90,7 @@
                     <img src="~/images/Plan.png" alt="Students Illustration">
                 </div>
             </div>
-        </section> *@
-        @RenderSection("Imagelogo", false)
-        @RenderSection("academic",false)
-        @RenderSection("Timetable", false)
+        </section>
     </main>
 
     <!-- Footer -->
@@ -137,5 +141,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>

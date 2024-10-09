@@ -1,10 +1,11 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+
 @section Timetable {
-    <div class="content-wrapper">
+    <div class="content-wrapper1">
         <h1>Class TimeTable</h1>
-        <p class="breadcrumb">You are here: Academics >> Class TimeTable</p>
+        <p class="breadcrumb1">You are here: Academics >> Class TimeTable</p>
     </div>
     <br>
     <div class="super-container">
@@ -33,4 +34,39 @@
             window.location.href = `/AcademicCalendar/DownloadHolyPdf?sem=${selectedSem}`;
         }
     </script>
+}
+@* @{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+@section Timetable{
+    <div class="Time">
+        <h1>Academic Calendar</h1>
+        <p class="breadcrumb">You are here: <span>Academics >> Class TimeTable >> CSE</span></p>
+        <div class="semester-select">
+            <label for="semester">Sem :</label>
+            <select id="semester">
+                <option value="I/IV I SEM">I/IV I SEM</option>
+                <option value="I/IV II SEM">I/IV II SEM</option>
+                <!-- Add other semesters as needed -->
+            </select>
+        </div>
+
+        <table class="timetable-table">
+            <thead>
+                <tr>
+                    <th>SNO</th>
+                    <th>Subject</th>
+                    <th>Faculty</th>
+                    <th>Timings</th>
+                </tr>
+            </thead>
+            <tbody id="timetableTableBody">
+                <!-- Table data goes here -->
+            </tbody>
+        </table>
+
+        <div class="section-info">
+            <span>Section: A</span>
+        </div>
+    </div> *@
 }

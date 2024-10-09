@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="~/css/LoginStyle.css">
     <link rel="stylesheet" href="~/css/SignUpStyle.css">
     <link rel="stylesheet" href="~/css/AcademicCalenderStyle.css">
+    <link rel="stylesheet" href="~/css/ClassTimeTableStyle.css">
+
 </head>
 <body>
     <!-- Header -->
@@ -70,12 +72,10 @@
     </header>
 
     <!-- Main Content -->
-    <main>@* 
-        @RenderSection("academic", false)
-        @RenderSection("Timetable", false) *@
-        @RenderSection("Imagelogo", false)
-        @RenderSection("Signin", false)
-        @RenderSection("Signup", false)
+    <main>
+        @RenderSection("Imagelogo", required:false)
+        @RenderSection("Signin", required:false)
+        @RenderSection("Signup", required:false)
     </main>
 
     <!-- Footer -->
@@ -127,5 +127,6 @@
         </div>
     </footer>
     @RenderSection("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+﻿/*.Time {
+    position:relative;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -800px;
+    margin-top: 0;
+    width: 35vw;
+    height: 90vh;
+}
+
+.semester-select {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.timetable-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .timetable-table th, .timetable-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .timetable-table th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
+
+.section-info {
+    text-align: right;
+    font-size: 18px;
+    margin-right: 10%;
+    margin-top: 10px;
+    color: #000;
+}*/

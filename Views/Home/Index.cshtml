@@ -1,17 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
-@section user{
-
-@if (ViewBag.Username != null)
-{
-    @ViewBag.Username;
-}
-else
-{
-    <h2>Hello, Guest!</h2>
-}
+@section user {
+    @Html.Partial("_DisplayUser")
 }

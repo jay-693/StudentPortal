@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using StudentPortal.Data;
 using Microsoft.Extensions.Caching.SqlServer;
+using Rotativa.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +43,8 @@ builder.Services.AddSession(options =>
 
 var app = builder.Build();
 
+RotativaConfiguration.Setup(app.Environment.WebRootPath);
+
 // Apply automatic migrations
 using (var scope = app.Services.CreateScope())
 {
@@ -69,6 +72,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=HomePage}/{id?}");
+    pattern: "{controller=ExaminationCell}/{action=ExamTimeTable}/{id?}");
+
 
 app.Run();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K+LqfT42EUzXDxfHic5x/OwQJuKUgEdbaQhk6ve1rJ0=",
+  "Hash": "91jP42WeB5AZMKN3KMMtJaUH5PhhcKv2COAZ7S+8Lgk=",
   "Source": "StudentPortal",
   "BasePath": "_content/StudentPortal",
   "Mode": "Default",
@@ -72,6 +72,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\AcademicCalenderStyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\ClassTimeTableStyle.css",
+      "SourceId": "StudentPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\",
+      "BasePath": "_content/StudentPortal",
+      "RelativePath": "css/ClassTimeTableStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ClassTimeTableStyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\ExaminationCellStyle.css",
+      "SourceId": "StudentPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\",
+      "BasePath": "_content/StudentPortal",
+      "RelativePath": "css/ExaminationCellStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ExaminationCellStyle.css"
     },
     {
       "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\Landingstyle.css",
@@ -1440,6 +1478,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\pdfs\\Semester1.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "StudentPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\",
+      "BasePath": "_content/StudentPortal",
+      "RelativePath": "Rotativa/wkhtmltopdf.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
     }
   ]
 }

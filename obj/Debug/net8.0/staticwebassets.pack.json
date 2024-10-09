@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\StudentPortal.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "PackagePath": "staticwebassets\\Rotativa\\wkhtmltopdf.exe"
+    },
+    {
       "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\AcademicCalenderStyle.css",
       "PackagePath": "staticwebassets\\css\\AcademicCalenderStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\ClassTimeTableStyle.css",
+      "PackagePath": "staticwebassets\\css\\ClassTimeTableStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\ExaminationCellStyle.css",
+      "PackagePath": "staticwebassets\\css\\ExaminationCellStyle.css"
     },
     {
       "Id": "C:\\Users\\Vijay Vattikuti\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\Landingstyle.css",
