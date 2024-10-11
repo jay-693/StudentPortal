@@ -3,8 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using StudentPortal.Data;
 using Microsoft.Extensions.Caching.SqlServer;
 using Rotativa.AspNetCore;
+using LoginDemo.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews(options =>
+{
+    // Add the custom exception filter globally
+    options.Filters.Add<CustomExceptionFilter>();
+});
 
 // Add DbContext for the application
 builder.Services.AddDbContext<StudentPortalDbContext>(options =>
@@ -72,7 +78,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=ExaminationCell}/{action=ExamTimeTable}/{id?}");
+    pattern: "{controller=Home}/{action=HomePage}/{id?}");
 
 
 app.Run();

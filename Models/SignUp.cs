@@ -25,6 +25,8 @@ namespace StudentPortal.Models
         // Navigation property for the relationship
         public ICollection<Holiday> Holidays { get; set; }
         public ICollection<ExamTimeTable> ExamTimeTables { get; set; }
+        public ICollection<LabInternalMarks> LabInternalMarks { get; set; }
+        public ICollection<SemwiseGradesDetails> SemwiseGradesDetails { get; set; }
 
     }
 }

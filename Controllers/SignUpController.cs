@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using LoginDemo.Filters;
 
 namespace StudentPortal.Controllers
 {
@@ -59,49 +60,54 @@ namespace StudentPortal.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        [ServiceFilter(typeof(CustomExceptionFilter))]
         public async Task<IActionResult> Login(string username, string password, string loginAs)
         {
-            // Check user credentials
-            var user = _context.SignUps.FirstOrDefault(u => u.Username == username && u.Password == password);
-
-            if (user != null)
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                // Create the user's claims
-                var claims = new List<Claim>
+                throw new ArgumentException("Username and password must be provided.");
+            }
+                // Check user credentials
+                var user = _context.SignUps.FirstOrDefault(u => u.Username == username && u.Password == password);
+
+                if (user != null)
+                {
+                    // Create the user's claims
+                    var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, user.Username),
             new Claim(ClaimTypes.Role, loginAs) // Set roles like Admin/Student
         };
 
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-                var authProperties = new AuthenticationProperties
-                {
-                    IsPersistent = true,  // Session should persist across browser restarts
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1) // Optional expiration for the session
-                };
+                    var authProperties = new AuthenticationProperties
+                    {
+                        IsPersistent = true,  // Session should persist across browser restarts
+                        ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1) // Optional expiration for the session
+                    };
 
-                // Sign in the user
-                await HttpContext.SignInAsync(
-                    CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal(claimsIdentity),
-                    authProperties
-                );
+                    // Sign in the user
+                    await HttpContext.SignInAsync(
+                        CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity),
+                        authProperties
+                    );
 
-                // Optional: Set some session data
-                HttpContext.Session.SetString("UserName", user.Username);
-                HttpContext.Session.SetString("Role", loginAs);
+                    // Optional: Set some session data
+                    HttpContext.Session.SetString("UserName", user.Username);
+                    HttpContext.Session.SetString("Role", loginAs);
 
-                // Redirect to the homepage after successful login
-                return RedirectToAction("Index", "Home", new { username = user.Username });
-            }
+                    // Redirect to the homepage after successful login
+                    return RedirectToAction("Index", "Home", new { username = user.Username });
+                }
 
-            // If login fails, show an error message
-            ViewBag.Error = "Invalid username or password.";
-            return View();
+                // If login fails, show an error message
+                ViewBag.Error = "Invalid username or password.";
+                return View();
+            
         }
-
     }
 }
 

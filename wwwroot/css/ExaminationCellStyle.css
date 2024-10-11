@@ -28,7 +28,6 @@
 
 .exam-time-table{
     display:flex;
-    background-color:red;
     width:50vw;  
 }
 .exam-page{
@@ -76,3 +75,4 @@ select {
     margin-right:65%;
     margin-top:-15%;
 }
+

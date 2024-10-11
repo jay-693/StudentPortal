@@ -97,6 +97,98 @@ namespace StudentPortal.Migrations
                     b.ToTable("Holidays");
                 });
 
+            modelBuilder.Entity("StudentPortal.Models.LabInternalMarks", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("Subject Code/Lab Code");
+
+                    b.Property<decimal>("Marks")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("Mid Marks(30)/Lab InternalMarks(40)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Subject Name/Lab Name");
+
+                    b.Property<int>("Semester")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sno")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("LabInternalMarks");
+                });
+
+            modelBuilder.Entity("StudentPortal.Models.SemwiseGradesDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Grade")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<string>("MonthAndYear")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)")
+                        .HasColumnName("Month&year");
+
+                    b.Property<int>("Semester")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sno")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Subject Name/Lab Name");
+
+                    b.Property<string>("SubjectCodeLabCode")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("Subject code/Lab Code");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("SemwiseGradesDetails");
+                });
+
             modelBuilder.Entity("StudentPortal.Models.SignUp", b =>
                 {
                     b.Property<int>("StudentId")
@@ -146,11 +238,37 @@ namespace StudentPortal.Migrations
                     b.Navigation("SignUp");
                 });
 
+            modelBuilder.Entity("StudentPortal.Models.LabInternalMarks", b =>
+                {
+                    b.HasOne("StudentPortal.Models.SignUp", "SignUp")
+                        .WithMany("LabInternalMarks")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SignUp");
+                });
+
+            modelBuilder.Entity("StudentPortal.Models.SemwiseGradesDetails", b =>
+                {
+                    b.HasOne("StudentPortal.Models.SignUp", "SignUp")
+                        .WithMany("SemwiseGradesDetails")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SignUp");
+                });
+
             modelBuilder.Entity("StudentPortal.Models.SignUp", b =>
                 {
                     b.Navigation("ExamTimeTables");
 
                     b.Navigation("Holidays");
+
+                    b.Navigation("LabInternalMarks");
+
+                    b.Navigation("SemwiseGradesDetails");
                 });
 #pragma warning restore 612, 618
         }
