@@ -22,11 +22,5 @@ namespace StudentPortal.Models
         [Compare("Password", ErrorMessage = "Password and Confirm Password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        // Navigation property for the relationship
-        public ICollection<Holiday> Holidays { get; set; }
-        public ICollection<ExamTimeTable> ExamTimeTables { get; set; }
-        public ICollection<LabInternalMarks> LabInternalMarks { get; set; }
-        public ICollection<SemwiseGradesDetails> SemwiseGradesDetails { get; set; }
-
     }
 }

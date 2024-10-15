@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
-using LoginDemo.Filters;
 
 namespace StudentPortal.Controllers
 {
@@ -60,8 +59,6 @@ namespace StudentPortal.Controllers
         {
             return View();
         }
-        [HttpPost]
-        [ServiceFilter(typeof(CustomExceptionFilter))]
         public async Task<IActionResult> Login(string username, string password, string loginAs)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))

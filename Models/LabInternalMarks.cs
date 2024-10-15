@@ -25,9 +25,9 @@ namespace StudentPortal.Models
         public decimal Marks { get; set; }
         public int Semester { get; set; }
 
-        public int StudentId { get; set; }
+       /* public int StudentId { get; set; }
 
         [ForeignKey("StudentId")]
-        public SignUp SignUp { get; set; }
+        public SignUp SignUp { get; set; }*/
     }
 }

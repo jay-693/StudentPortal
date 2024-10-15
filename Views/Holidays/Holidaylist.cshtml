@@ -1,5 +1,4 @@
-﻿@* @model IEnumerable<dynamic>  *@<!-- Assuming you're using the dynamic type from the controller -->
-@{
+﻿@* @{
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 @section holiday{
@@ -32,4 +31,63 @@
             <button class="download-btn">Download</button>
         </a>
     </div>  
+} *@
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@section holiday {
+    <div class="holiday-wrapper">
+        <h1>List Of Holidays</h1>
+        <p class="bread">You are here: Academics >> List Of Holidays</p>
+        <centre><h3>List of holidays 2024-2025</h3></centre>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Occasion</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var holiday in Model)
+                {
+                    <tr>
+                        <td>@holiday.Month</td>
+                        <td>@holiday.Date</td>
+                        <td>@holiday.Day</td>
+                        <td>@holiday.Occasion</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+
+        <!-- Pagination Links -->
+        <div class="pagination" style="float:right; display:flex; gap:10px;">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a href="@Url.Action("Holidaylist", new { pageNumber = ViewBag.CurrentPage - 1 })" class="btn btn-secondary pagination-btn pagination-text">Prev</a>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <a href="@Url.Action("Holidaylist", new { pageNumber = i })"
+                   class="btn btn-primary pagination-btn @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+            }
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a href="@Url.Action("Holidaylist", new { pageNumber = ViewBag.CurrentPage + 1 })" class="btn btn-secondary pagination-btn pagination-text">Next</a>
+            }
+        </div>
+
+
+        <br />
+        <a href="@Url.Action("DownloadHolidaysPdf", "Holidays")" class="btn btn-primary" style="text-decoration:none">
+            <button class="download-btn">Download</button>
+        </a>
+    </div>
 }

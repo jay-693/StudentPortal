@@ -24,10 +24,10 @@ namespace StudentPortal.Models
         public string Occasion { get; set; }
 
         // Foreign key property
-        public int StudentId { get; set; }
+       /* public int StudentId { get; set; }
 
         // Navigation property
         [ForeignKey("StudentId")]
-        public SignUp SignUp { get; set; }
+        public SignUp SignUp { get; set; }*/
     }
 }

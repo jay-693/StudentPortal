@@ -11,10 +11,10 @@ namespace StudentPortal.Models
             public DateTime ExamDate { get; set; }
             public string Timing { get; set; }
             public int Semester { get; set; }
-        public int StudentId { get; set; }
+       /* public int StudentId { get; set; }
 
         // Navigation property
         [ForeignKey("StudentId")]
-        public SignUp SignUp { get; set; }
+        public SignUp SignUp { get; set; }*/
     }
 }
